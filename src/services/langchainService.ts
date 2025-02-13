@@ -1,6 +1,6 @@
 import { ChatOpenAI } from "@langchain/openai";
 import { HumanMessage, SystemMessage } from "@langchain/core/messages";
-import { MODEL_CONFIG, ModelType } from "@/config/model";
+import { MODEL_CONFIG } from "@/config/model";
 
 class LangChainService {
   private model: ChatOpenAI;
