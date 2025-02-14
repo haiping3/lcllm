@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { langchainService } from '@/services/langchainService';
+import { aiService } from '@/services/aiService';
 
 export async function POST(request: Request) {
   try {
@@ -12,7 +12,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const content = await langchainService.generateNovel(prompt);
+    const content = await aiService.generateNovel(prompt);
     return NextResponse.json({ content });
   } catch (error) {
     console.error('Novel generation error:', error);
